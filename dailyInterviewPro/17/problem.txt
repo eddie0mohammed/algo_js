@@ -1,6 +1,7 @@
 This problem was recently asked by Uber:
 
-You are given a list of n numbers, where every number is at most k indexes away from its properly sorted index. Write a sorting algorithm (that will be given the number k) for this list that can solve this in O(n log k)
+You are given a list of n numbers, where every number is at most k indexes away from its properly sorted index.
+ Write a sorting algorithm (that will be given the number k) for this list that can solve this in O(n log k)
 
 Example:
 Input: [3, 2, 6, 5, 4], k=2

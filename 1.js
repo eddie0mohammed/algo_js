@@ -1,17 +1,17 @@
-
-const solution = (str) => {
-
-  let arr = str.split('');
-  let newArr = arr.map(elem => {
-    if ((/[A-Z]/g).test(elem)){
-      return ` ${elem}`
-    }else{
-      return elem;
-    }
-  });
-
-  return newArr.join('');
+function jumpingOnClouds(c) {
+    
+  let jump = 0;
+  for (let i = 0; i < c.length; i+= 2){
+      
+      if (c[i] === 1){
+          i--;
+          
+      }
+      jump++;
+  }
+  return jump;
 }
 
 
-console.log(solution('camelCase'));
+// console.log(jumpingOnClouds([0,0, 1, 0, 0, 0, 0, 1, 0, 0]))
+console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 0]));

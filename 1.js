@@ -1,17 +1,18 @@
-function jumpingOnClouds(c) {
-    
-  let jump = 0;
-  for (let i = 0; i < c.length; i+= 2){
+
+const solution = (arr) => {
+
+  let container = [];
+  let newArr = [];
+
+  for (let i = 1; i < arr.length - 2; i++){
+    for (let j = 1; j < arr[i].length - 2; j++){
+
       
-      if (c[i] === 1){
-          i--;
-          
-      }
-      jump++;
+    }
   }
-  return jump;
+
+
 }
 
 
-// console.log(jumpingOnClouds([0,0, 1, 0, 0, 0, 0, 1, 0, 0]))
-console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 0]));
+

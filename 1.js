@@ -1,15 +1,18 @@
 
-const solution = (arr) => {
+const solution = (input) => {
 
-  for (let i = 0; i < (arr.length / 2); i++){
+  input = input.sort((a, b) => a - b);
+  let newArr = [];
+  for (let i = 0; i < input.length; i++){
+    for (let j = i + 1; j < input.length; j++){
 
-    let temp = arr[i];
-    arr[i] = arr[arr.length - 1 - i];
-    arr[arr.length - 1 - i] = temp
+      if (input[j] - input[i] === 2){
+        newArr.push([input[i], input[j]]);
+      }
 
-    
+    }
   }
-  return arr;
+  return newArr;
 }
 
-console.log(solution([1, 2, 3, 4, 5]));
+console.log(solution([1, 2, 3, 4] ));

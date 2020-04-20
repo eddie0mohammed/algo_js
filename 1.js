@@ -1,18 +1,19 @@
 
-const solution = (input) => {
+const solution = (num) => {
 
-  input = input.sort((a, b) => a - b);
-  let newArr = [];
-  for (let i = 0; i < input.length; i++){
-    for (let j = i + 1; j < input.length; j++){
+  let arr = num.toString().split('');
+  let len = arr.length;
 
-      if (input[j] - input[i] === 2){
-        newArr.push([input[i], input[j]]);
-      }
+  let sum = arr.reduce((acc, elem) => {
+    return acc + (parseInt(elem) ** len);
+  }, 0);
 
-    }
+  console.log(sum);
+  if (sum === num){
+    return true;
   }
-  return newArr;
+  return false;
 }
 
-console.log(solution([1, 2, 3, 4] ));
+console.log(solution(7));
+console.log(solution(153));

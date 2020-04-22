@@ -1,19 +1,35 @@
 
-const solution = (num) => {
+const solution = (num, parts) => {
 
-  let arr = num.toString().split('');
-  let len = arr.length;
-
-  let sum = arr.reduce((acc, elem) => {
-    return acc + (parseInt(elem) ** len);
-  }, 0);
-
-  console.log(sum);
-  if (sum === num){
-    return true;
+  let arr = [];
+  for (let i = 0; i < parts; i++){
+    arr.push(1);
   }
-  return false;
+
+  let sum = calculateSum(arr);
+  if (sum === num){
+    return arr;
+  }
+  while (sum < num){
+
+    for (let i = arr.length - 1; i >= 0; i--){
+
+      arr[i]+= 1;
+      sum = calculateSum(arr);
+      if (sum === num){
+        return arr;
+      }
+    }
+  }
+  return '';
+
 }
 
-console.log(solution(7));
-console.log(solution(153));
+const calculateSum = (arr) => {
+
+  return arr.reduce((acc, elem) => {
+    return acc + elem;
+  }, 0);
+}
+
+console.log(solution(2, 2));

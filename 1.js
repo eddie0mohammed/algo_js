@@ -1,35 +1,16 @@
 
-const solution = (num, parts) => {
+const solution = (str) => {
 
-  let arr = [];
-  for (let i = 0; i < parts; i++){
-    arr.push(1);
-  }
 
-  let sum = calculateSum(arr);
-  if (sum === num){
-    return arr;
-  }
-  while (sum < num){
-
-    for (let i = arr.length - 1; i >= 0; i--){
-
-      arr[i]+= 1;
-      sum = calculateSum(arr);
-      if (sum === num){
-        return arr;
-      }
+  let arr = str.split('WUB');
+  // console.log(arr);
+  arr = arr.filter(elem => {
+    if (elem){
+      return elem;
     }
-  }
-  return '';
-
+  });
+  return arr.join(' ');
 }
 
-const calculateSum = (arr) => {
-
-  return arr.reduce((acc, elem) => {
-    return acc + elem;
-  }, 0);
-}
-
-console.log(solution(2, 2));
+// console.log(solution("AWUBBWUBC"));
+console.log(solution("AWUBWUBWUBBWUBWUBWUBC"));

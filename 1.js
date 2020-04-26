@@ -1,16 +1,17 @@
 
-const solution = (str) => {
+const solution = (arr1, arr2) => {
 
+  if (arr1.length !== arr2.length){
+    return ;
+  }
 
-  let arr = str.split('WUB');
-  // console.log(arr);
-  arr = arr.filter(elem => {
-    if (elem){
-      return elem;
-    }
-  });
-  return arr.join(' ');
+  for (let i = 0; i < arr1.length; i++){
+
+    let temp = arr2[arr2.length - 1 - i];
+    arr2[arr2.length - 1 - i] = arr1[i];
+    arr1[i] = temp;
+  }
+  return [arr1, arr2];
 }
 
-// console.log(solution("AWUBBWUBC"));
-console.log(solution("AWUBWUBWUBBWUBWUBWUBC"));
+console.log(solution(['a', 'b', 'c'], [1, 2, 3]))

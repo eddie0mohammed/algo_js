@@ -1,16 +1,25 @@
 
+// const add = (() => {
+  
+//   let a = 1;
+//   return function(){
+//     a++;
+//     return a;
+//   }
+// })();
 
-const add1 = () => {
+
+const add = () => {
 
   let a = 1;
-
-  const test = function() {
-    console.log
+  return function(){
+    a++;
+    return a;
   }
-
-  return test
 }
 
-console.log(add1());
-console.log(add1());
-console.log(add1());
+
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());

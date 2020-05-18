@@ -1,15 +1,19 @@
 
 
-// let a = 1;
+const solution = (arr) => {
 
-// let b = a++;
-// console.log('a is ', a);
-// console.log('b is ', b);
-// let c = ++a;
+    for (let i = 0; i < arr.length; i++){
+        for (let j = 0; j < arr.length; j++){
 
-// console.log('a is ', a);
-// console.log('c is ',c);
+            if (arr[j] > arr[j + 1]){
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp; 
+            }
+        }
+    }
 
-// console.log((b + c));
+    return arr;
+}
 
-
+console.log(solution([5,4,3,2,1]));

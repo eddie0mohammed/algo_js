@@ -1,19 +1,18 @@
 
+function* test(){
 
-const solution = (arr) => {
-
-    for (let i = 0; i < arr.length; i++){
-        for (let j = 0; j < arr.length; j++){
-
-            if (arr[j] > arr[j + 1]){
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp; 
-            }
-        }
-    }
-
-    return arr;
+    yield 'hello',
+    yield 'world'
 }
 
-console.log(solution([5,4,3,2,1]));
+const testing = test();
+console.log(testing.next());
+console.log(testing.next());
+console.log(testing.next());
+
+
+const x = test();
+
+for (let iterator of x){
+    console.log(iterator);
+}

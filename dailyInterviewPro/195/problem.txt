@@ -1,6 +1,7 @@
 This problem was recently asked by Google:
 
-Given a string, determine if you can remove any character to create a palindrome.
+Given a string, determine if you can remove any character 
+to create a palindrome.
 
 Here's some examples and some starter code:
 

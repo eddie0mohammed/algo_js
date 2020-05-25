@@ -1,18 +1,17 @@
 
-function* test(){
 
-    yield 'hello',
-    yield 'world'
+const mainState = {
+    "1": ["1"],
+    "2": ["2"],
+    "3": ["3"]
 }
 
-const testing = test();
-console.log(testing.next());
-console.log(testing.next());
-console.log(testing.next());
 
-
-const x = test();
-
-for (let iterator of x){
-    console.log(iterator);
+const objToSend = {
+    "a": "test1",
+    "b": "test2",
+    "c": "test3",
+    "test": mainState
 }
+
+console.log(JSON.stringify(objToSend));

@@ -19,6 +19,7 @@ const solution = (arr1, arr2) => {
             newArr.push(key);
         }
     }
+    
 
     return newArr;
 }

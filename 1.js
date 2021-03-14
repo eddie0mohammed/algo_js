@@ -1,13 +1,1 @@
-a
-a
-a
-a
-a
-a
-a
-aa
-a
-a
-aaa
-aaaa
-aaa
+1
